@@ -1,5 +1,9 @@
 module DefaultRenderer
   
+  def css_classes
+    { class: [@content.class.to_s.downcase] }
+  end
+  
   def header
     @content.preview
   end
