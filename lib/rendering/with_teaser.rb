@@ -1,7 +1,7 @@
 module WithTeaser
   
   # show the teaser image
-  def header
+  def image
     "TEASER IMAGE"
   end
   
@@ -9,4 +9,10 @@ module WithTeaser
   def text
     @content.text[0...25] + "..."
   end
+  
+  # set css so that header div is shown
+  def css_classes
+    super + ['with-image']
+  end
+  
 end

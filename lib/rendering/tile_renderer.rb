@@ -7,6 +7,8 @@ require 'with_teaser'
 require 'with_link'
 
 class TileRenderer
+
+  attr_reader :content
   
   def self.for(content)
     new(content)
@@ -27,8 +29,8 @@ class TileRenderer
   # sets self up to render the given @content correctly
   def configure_renderer!
     extend(DefaultRenderer)
-    extend(WithTeaser) if @content.has_teaser?
-    extend(WithLink) if @content.is_a?(Link)
+    extend(WithTeaser) if content.has_teaser?
+    extend(WithLink) if content.is_a?(Link)
   end
   
 end
