@@ -1,3 +1,3 @@
-Prototype: Render a variety of domain models into a common HTML template (i.e. a partial), although each
-domain model has different properties.
-Implemented by extening the rendering object (which is the data provider for the template) selectively at runtime.
+Prototype: Render a variety of domain models into a common HTML template (i.e. a partial), although each domain model has different properties.
+
+The most interesting part is the implementation of rendering different properties: the rendering object (which is the data provider for the template) is extended selectively at runtime.
