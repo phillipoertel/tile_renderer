@@ -1,0 +1,3 @@
+Prototype: render a variety of domain models into a standard HTML template, depending on the 
+type of domain model and its capabilities.
+Implemented by extening the rendering object (which is the data provider for the template) selectively at runtime.
