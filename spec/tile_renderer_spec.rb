@@ -49,6 +49,9 @@ describe TileRenderer do
     it "has the category" do
       tile.category.should == content.category
     end
+    it "has additional css classes" do
+      tile.css_classes.should include("show-category")
+    end
   end
   
 end

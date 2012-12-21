@@ -1,7 +1,9 @@
 module DefaultRenderer
   
   def css_classes
-    [content.class.to_s.downcase]
+    classes = [content.class.to_s.downcase]
+    classes << 'show-category' if content.category
+    classes
   end
   
   def image

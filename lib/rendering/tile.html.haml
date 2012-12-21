@@ -2,20 +2,25 @@
   :css
      /* hide optional parts of the template by default */
      .image, 
-     .footer { 
-       display:none; 
+     .footer,
+     .category { 
+       display: none; 
      }
      /* show them when the corresponding class is set on the outermost div */
      .show-image .image, 
      .show-footer .footer {
-       display:block;
+       display: block;
+     }
+     .show-category .category {
+       display: inline;
      }
   
 .tile{:class => css_classes}
   .image
     = image
   .body
-    = category
+    %span.category
+      = category
     %h2= title
     .text
       = text
