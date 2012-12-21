@@ -1,6 +1,6 @@
 class TileRenderer
 
-  attr_reader :content
+  attr_reader :content, :extensions
   
   def self.for(content)
     new(content)
@@ -18,12 +18,17 @@ class TileRenderer
   
   private
   
-  # sets self up to render the given content correctly
-  def configure_renderer!
-    extend(DefaultRenderer)
-    extend(WithPreview) if content.has_teaser?
-    extend(WithTeaser) if content.has_teaser?
-    extend(WithLink) if content.is_a?(Link)
-  end
+    # sets self up to render the given content correctly
+    # assign to rendering_extensions first so this can be debugged easily (see attr_reader)
+    def configure_renderer!
+      extensions = [DefaultRenderer]
+      extensions << extension_for_content_type
+      extensions << WithPreview if content.has_preview?
+      extensions << WithTeaser if content.has_teaser?
+      extensions.each { |e| extend(e) }
+    end
   
+    def extension_for_content_type
+      Kernel.const_get("With#{content.class}")
+    end
 end

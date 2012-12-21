@@ -7,19 +7,19 @@ module DefaultRenderer
   def image
   end
   
+  def category
+    content.category
+  end
+  
   def title
     content.title
   end
   
   def text
-    content.text[0...100] + "..."
+    content.description[0...100]
   end
   
   def footer
-  end
-  
-  def category
-    content.category
   end
   
 end

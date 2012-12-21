@@ -2,16 +2,14 @@ require 'ostruct'
 
 class Content < OpenStruct
   
-  def preview
-    "PREVIEW IMAGE"
-  end
-  
   def title 
     "Content Title"
   end
-  def text
-    "Das ist das Haus vom Nikolaus. " * 10
+  
+  def description
+    "Das ist die Beschreibung vom Haus des Nikolaus. " * 10
   end
+  
   def has_teaser?
     !!teaser
   end

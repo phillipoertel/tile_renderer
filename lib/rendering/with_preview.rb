@@ -7,7 +7,7 @@ module WithPreview
   
   # shorten text
   def text
-    content.text[0...25] + "..."
+    super[0...25]
   end
   
   # set css so that header div is shown

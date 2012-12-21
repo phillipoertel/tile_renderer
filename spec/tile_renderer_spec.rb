@@ -27,7 +27,7 @@ describe TileRenderer do
     end
   end
   
-  context "A link with teaser image (integration test, going through the rendered template)" do
+  context "A link with teaser image" do
     let(:content) { Link.new(link: 'http://www.sinatrarb.com', teaser: "TEASER IMAGE") }
     it "has content.teaser as image" do
       tile.image.should == content.teaser
@@ -38,6 +38,16 @@ describe TileRenderer do
     it "has additional css classes" do
       tile.css_classes.should include("show-image")
       tile.css_classes.should include("show-footer")
+    end
+  end
+  
+  context "A HTML text with category" do
+    let(:content) { HtmlText.new(content: 'Bla bla <b>HTML</b>', category: "ARTICLE") }
+    it "has content.content as text" do
+      tile.text.should == content.content
+    end
+    it "has the category" do
+      tile.category.should == content.category
     end
   end
   
