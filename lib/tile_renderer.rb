@@ -2,7 +2,6 @@ $LOAD_PATH.unshift("lib/models")
 $LOAD_PATH.unshift("lib/rendering")
 
 # gems
-gem 'haml'
 require 'haml'
 
 # domain models
