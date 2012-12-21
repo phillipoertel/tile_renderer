@@ -1,11 +1,3 @@
-gem 'haml'
-require 'haml'
-
-## modules
-require 'default_renderer'
-require 'with_teaser'
-require 'with_link'
-
 class TileRenderer
 
   attr_reader :content
@@ -26,7 +18,7 @@ class TileRenderer
   
   private
   
-  # sets self up to render the given @content correctly
+  # sets self up to render the given content correctly
   def configure_renderer!
     extend(DefaultRenderer)
     extend(WithTeaser) if content.has_teaser?
