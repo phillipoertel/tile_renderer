@@ -6,7 +6,7 @@ describe TileRenderer do
   
   context "A plain text" do
     let(:content) { Text.new }
-    it "has no pretile image" do
+    it "has no preview image" do
       tile.title.should == content.title
     end
     it "has an empty footer" do
@@ -15,7 +15,7 @@ describe TileRenderer do
   end
   
   context "A video with teaser image" do
-    let(:content) { Video.new(pretile: 'video.mpg', teaser: "TEASER IMAGE") }
+    let(:content) { Video.new(preview: 'video.mpg', teaser: "TEASER IMAGE") }
     it "has content.teaser as image" do
       tile.image.should == content.teaser
     end
