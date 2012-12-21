@@ -7,7 +7,7 @@ module WithLink
   
   # set css so that footer div is shown
   def css_classes
-    super + ['with-footer']
+    super + ['show-footer']
   end
   
 end

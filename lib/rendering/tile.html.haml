@@ -1,3 +1,16 @@
+%style
+  :css
+     /* hide optional parts of the template by default */
+     .image, 
+     .footer { 
+       display:none; 
+     }
+     /* show them when the corresponding class is set on the outermost div */
+     .show-image .image, 
+     .show-footer .footer {
+       display:block;
+     }
+  
 .tile{:class => css_classes}
   .image
     = image

@@ -23,7 +23,7 @@ describe TileRenderer do
       html.should have_tag("div[class=footer]", /\A\s+\Z/)
     end
     it "has additional css classes" do
-      html.should have_tag("div[class~=with-image]")
+      html.should have_tag("div[class~=show-image]")
     end
   end
   
@@ -36,8 +36,8 @@ describe TileRenderer do
       html.should have_tag("div[class=footer]", /#{content.link}/)
     end
     it "has additional css classes" do
-      html.should have_tag("div[class~=with-image]")
-      html.should have_tag("div[class~=with-footer]")
+      html.should have_tag("div[class~=show-image]")
+      html.should have_tag("div[class~=show-footer]")
     end
   end
   
