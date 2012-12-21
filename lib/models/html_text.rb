@@ -1,0 +1,2 @@
+class HtmlText < Content
+end
