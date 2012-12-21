@@ -22,13 +22,13 @@ class TileRenderer
     # assign to rendering_extensions first so this can be debugged easily (see attr_reader)
     def configure_renderer!
       extensions = [DefaultRenderer]
-      extensions << extension_for_content_type
+      extensions << content_rendering_adapter
       extensions << WithPreview if content.has_preview?
       extensions << WithTeaser if content.has_teaser?
       extensions.each { |e| extend(e) }
     end
   
-    def extension_for_content_type
-      Kernel.const_get("With#{content.class}")
+    def content_rendering_adapter
+      Adapter.const_get(content.class.to_s.to_sym)
     end
 end

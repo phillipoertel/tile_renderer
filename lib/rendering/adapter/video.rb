@@ -1,0 +1,2 @@
+module Adapter::Video
+end

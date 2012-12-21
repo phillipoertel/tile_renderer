@@ -1,4 +1,4 @@
-module WithHtmlText
+module Adapter::HtmlText
   
   def text
     content.content[0...25]

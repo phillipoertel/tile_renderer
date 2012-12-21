@@ -1,4 +1,4 @@
-module WithLink
+module Adapter::Link
   
   # insert link into footer
   def footer

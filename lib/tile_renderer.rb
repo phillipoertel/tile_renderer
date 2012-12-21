@@ -1,24 +1,26 @@
-$LOAD_PATH.unshift("lib/models")
-$LOAD_PATH.unshift("lib/rendering")
+$LOAD_PATH.unshift("lib")
 
 # gems
 require 'haml'
 
 # domain models
-require 'content'
-require 'video'
-require 'link'
-require 'text'
-require 'html_text'
-
-## rendering modules
-require 'default_renderer'
-require 'with_teaser'
-require 'with_preview'
-require 'with_link'
-require 'with_video'
-require 'with_text'
-require 'with_html_text'
+require 'models/content'
+require 'models/video'
+require 'models/link'
+require 'models/text'
+require 'models/html_text'
 
 # presentation/rendering object
-require 'tile_renderer'
+require 'rendering/tile_renderer'
+
+## rendering modules and adapters
+require 'rendering/default_renderer'
+require 'rendering/with_teaser'
+require 'rendering/with_preview'
+
+module Adapter; end
+
+require 'rendering/adapter/link'
+require 'rendering/adapter/video'
+require 'rendering/adapter/text'
+require 'rendering/adapter/html_text'
