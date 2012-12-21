@@ -21,6 +21,7 @@ class TileRenderer
   # sets self up to render the given content correctly
   def configure_renderer!
     extend(DefaultRenderer)
+    extend(WithPreview) if content.has_teaser?
     extend(WithTeaser) if content.has_teaser?
     extend(WithLink) if content.is_a?(Link)
   end

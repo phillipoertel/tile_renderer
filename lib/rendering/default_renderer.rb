@@ -5,7 +5,6 @@ module DefaultRenderer
   end
   
   def image
-    content.has_preview? ? content.preview : nil
   end
   
   def title
@@ -17,6 +16,10 @@ module DefaultRenderer
   end
   
   def footer
+  end
+  
+  def category
+    content.category
   end
   
 end

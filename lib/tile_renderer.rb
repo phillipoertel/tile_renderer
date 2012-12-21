@@ -13,6 +13,7 @@ require 'text'
 ## rendering modules
 require 'default_renderer'
 require 'with_teaser'
+require 'with_preview'
 require 'with_link'
 
 # presentation/rendering object
