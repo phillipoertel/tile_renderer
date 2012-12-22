@@ -1,8 +1,8 @@
 class TileRenderer
 
   class << self
-    def for(content)
-      new(content)
+    def render(content)
+      new(content).render
     end
     private :new
   end  
@@ -11,12 +11,9 @@ class TileRenderer
     @content = content
   end
   
-  def template_data
-    TemplateData.for(@content)
-  end
-  
   def render
     template = File.read('lib/rendering/tile.html.haml')
+    template_data = TemplateData.for(@content)
     Haml::Engine.new(template).render(template_data)
   end
 

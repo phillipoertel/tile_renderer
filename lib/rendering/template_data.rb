@@ -1,12 +1,12 @@
 class TemplateData
   
-  attr_reader :content, :extensions
-  
   def self.for(content)
     new(content)
   end
   
   private
+  
+    attr_reader :content
   
     def initialize(content)
       @content = content

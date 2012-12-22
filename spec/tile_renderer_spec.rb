@@ -1,13 +1,13 @@
 require 'spec_helper'
 
 def tile_for(content)
-  TileRenderer.for(content)
+  TileRenderer.render(content)
 end
 
 describe "TileRenderer with renderered view (to test integration)" do
   
   context "A link with teaser image" do
-    Given(:html) { tile_for(Link.new(link: 'http://www.sinatrarb.com', teaser: "TEASER IMAGE")).render }
+    Given(:html) { tile_for(Link.new(link: 'http://www.sinatrarb.com', teaser: "TEASER IMAGE")) }
     it "has content.teaser as image" do
       html.should have_tag("div[class=image]", /TEASER IMAGE/)
     end
