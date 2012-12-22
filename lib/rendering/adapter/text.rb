@@ -1,2 +1,0 @@
-module Adapter::Text
-end
