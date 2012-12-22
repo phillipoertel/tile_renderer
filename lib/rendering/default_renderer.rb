@@ -1,4 +1,13 @@
+require 'forwardable'
+
 module DefaultRenderer
+
+  # some attributes are just passed through
+  extend Forwardable
+  def_delegators :content, :category, :title, :preview
+
+  # these are rendering-specific, but nil by default
+  attr_reader :image, :footer
   
   def css_classes
     classes = [content.class.to_s.downcase]
@@ -6,22 +15,8 @@ module DefaultRenderer
     classes
   end
   
-  def image
-  end
-  
-  def category
-    content.category
-  end
-  
-  def title
-    content.title
-  end
-  
   def text
     content.description[0...100]
-  end
-  
-  def footer
   end
   
 end
