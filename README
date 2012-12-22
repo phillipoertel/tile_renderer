@@ -1,3 +1,7 @@
-Prototype: Render a variety of domain models into a common HTML template (i.e. a partial), although each domain model has different properties.
+Prototype: 
 
-The most interesting part is the implementation of rendering different properties: the rendering object (which is the data provider for the template) is extended selectively at runtime.
+Render a variety of domain models into a common HTML template (i.e. a partial), although each domain model has different properties.
+
+The most interesting part is how the differences between the domain models are detected and rendering is adapted: the template data object (which is the data provider for the template) is extended selectively at runtime. This allows to have a separate module for each variation a domain model may have.
+
+Since this sounds fairy abstract, have a look at +spec/template_data_spec.rb+.
