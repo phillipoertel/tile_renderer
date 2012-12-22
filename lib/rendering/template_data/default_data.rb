@@ -1,6 +1,6 @@
 require 'forwardable'
 
-module DefaultRenderer
+module DefaultData
 
   # some attributes are just passed through
   extend Forwardable

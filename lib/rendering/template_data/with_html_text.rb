@@ -1,4 +1,4 @@
-module Adapter::HtmlText
+module WithHtmlText
   
   def text
     content.content
