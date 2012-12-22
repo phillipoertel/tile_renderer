@@ -1,8 +1,8 @@
 module WithPreview
-  
+
   # show the image
   def image
-    "PREVIEW IMAGE"
+    content.preview
   end
   
   # shorten text

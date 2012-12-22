@@ -1,10 +1,10 @@
 module WithTeaser
   
-  # show the teaser image
+  # show the image
   def image
-    "TEASER IMAGE"
+    content.teaser
   end
-  
+    
   # shorten text
   def text
     super && super[0...25]

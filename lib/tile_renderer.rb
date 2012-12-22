@@ -21,6 +21,4 @@ require 'rendering/with_preview'
 module Adapter; end
 
 require 'rendering/adapter/link'
-require 'rendering/adapter/video'
-require 'rendering/adapter/text'
 require 'rendering/adapter/html_text'
