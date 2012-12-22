@@ -12,6 +12,7 @@ require 'models/html_text'
 
 # presentation/rendering object
 require 'rendering/tile_renderer'
+require 'rendering/template_data'
 
 ## rendering modules and adapters
 require 'rendering/default_renderer'
