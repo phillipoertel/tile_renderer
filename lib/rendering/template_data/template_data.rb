@@ -17,8 +17,7 @@ class TemplateData
       @extensions = [DefaultData]
       @extensions << WithLink if content.is_a?(Link)
       @extensions << WithHtmlText if content.is_a?(HtmlText)
-      @extensions << WithPreview if content.has_preview?
-      @extensions << WithTeaser if content.has_teaser?
+      @extensions << WithImage if (content.has_preview? || content.has_teaser?)
       @extensions.each { |e| extend(e) }
     end
 end
