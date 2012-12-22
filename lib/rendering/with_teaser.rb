@@ -7,7 +7,7 @@ module WithTeaser
   
   # shorten text
   def text
-    super[0...25]
+    super && super[0...25]
   end
   
   # set css so that header div is shown

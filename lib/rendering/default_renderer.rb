@@ -16,7 +16,7 @@ module DefaultRenderer
   end
   
   def text
-    content.description[0...100]
+    content.description && content.description[0...100]
   end
   
 end
