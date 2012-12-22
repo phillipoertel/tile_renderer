@@ -8,7 +8,7 @@ describe TileRenderer do
 
   context "A plain text" do
     Given(:tile) { tile_for(Text.new(title: "Hello World")) }
-    Then { tile.preview.should be_nil }
+    Then { tile.image.should be_nil }
     Then { tile.title.should == "Hello World" }
     Then { tile.footer.should be_nil }
   end
