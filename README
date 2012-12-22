@@ -8,4 +8,4 @@ Since this sounds fairy abstract, have a look at spec/template_data_spec.rb.
 Also see run.rb for some final HTML output.
 
 And if you wonder what that could be useful for, have a look at this page: https://beta.torial.com/magazine
-Each box is a tile with different presenation of the underlying content element.
+Each box is a tile with different presentation of the underlying content element.
