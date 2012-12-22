@@ -9,24 +9,24 @@ describe TileRenderer do
   context "A plain text" do
     Given(:tile) { tile_for(Text.new(title: "Hello World")) }
     Then { tile.image.should be_nil }
-    Then { tile.title.should == "Hello World" }
-    Then { tile.footer.should be_nil }
+    And { tile.title.should == "Hello World" }
+    And { tile.footer.should be_nil }
   end
   
   context "A video with teaser image" do
     Given(:tile) { tile_for(Video.new(preview: 'video.mpg', teaser: "TEASER IMAGE")) }
     Then { tile.image.should == "TEASER IMAGE" }
-    Then { tile.footer.should be_nil }
-    Then { tile.css_classes.should include("show-image") }
+    And { tile.footer.should be_nil }
+    And { tile.css_classes.should include("show-image") }
   end
   
   context "A link with teaser image" do
     Given(:tile) { tile_for(Link.new(link: 'http://www.sinatrarb.com', teaser: "TEASER IMAGE")) }
     Then { tile.image.should == "TEASER IMAGE" }
-    Then { tile.footer.should == 'http://www.sinatrarb.com' }
-    Then { tile.footer.should == 'http://www.sinatrarb.com' }
-    Then { tile.css_classes.should include("show-image") }
-    Then { tile.css_classes.should include("show-footer") }
+    And { tile.footer.should == 'http://www.sinatrarb.com' }
+    And { tile.footer.should == 'http://www.sinatrarb.com' }
+    And { tile.css_classes.should include("show-image") }
+    And { tile.css_classes.should include("show-footer") }
   end
   
   context "A HTML text with category" do
