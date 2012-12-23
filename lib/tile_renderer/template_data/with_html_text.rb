@@ -1,4 +1,4 @@
-module WithHtmlText
+module TileRenderer::TemplateData::WithHtmlText
   
   def text
     content.content

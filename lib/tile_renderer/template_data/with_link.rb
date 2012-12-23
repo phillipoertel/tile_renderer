@@ -1,4 +1,4 @@
-module WithLink
+module TileRenderer::TemplateData::WithLink
   
   # insert link into footer
   def footer

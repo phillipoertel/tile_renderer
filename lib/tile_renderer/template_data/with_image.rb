@@ -1,4 +1,4 @@
-module WithImage
+module TileRenderer::TemplateData::WithImage
 
   # show the image
   def image

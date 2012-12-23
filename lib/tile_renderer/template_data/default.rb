@@ -1,6 +1,6 @@
 require 'forwardable'
 
-module DefaultData
+module TileRenderer::TemplateData::Default
 
   # some attributes are just passed through
   extend Forwardable

@@ -1,4 +1,4 @@
-class TemplateData
+class TileRenderer::TemplateData
   
   def self.for(content)
     new(content)
@@ -14,7 +14,7 @@ class TemplateData
     end
     
     def configure_self_for_content!
-      @extensions = [DefaultData]
+      @extensions = [Default]
       @extensions << WithLink if content.is_a?(Link)
       @extensions << WithHtmlText if content.is_a?(HtmlText)
       @extensions << WithImage if (content.has_preview? || content.has_teaser?)

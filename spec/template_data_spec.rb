@@ -1,8 +1,8 @@
 require 'spec_helper'
 
-describe TemplateData do
+describe TileRenderer::TemplateData do
 
-  When(:data) { TemplateData.for(content) }
+  When(:data) { TileRenderer::TemplateData.for(content) }
 
   context "The simplest possible content element" do
     Given(:content) { Content.new(title: "Hello World") }

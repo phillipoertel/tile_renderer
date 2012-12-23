@@ -1,4 +1,4 @@
-class TileRenderer
+class TileRenderer::Renderer
 
   class << self
     def render(content)
@@ -12,7 +12,7 @@ class TileRenderer
   end
   
   def render
-    template_data = TemplateData.for(@content)
+    template_data = TileRenderer::TemplateData.for(@content)
     Haml::Engine.new(template).render(template_data)
   end
 
