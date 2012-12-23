@@ -19,7 +19,7 @@ class TileRenderer::Renderer
   private
   
     def template
-      f = File.expand_path(File.join(File.dirname(__FILE__), 'tile.html.haml'))
+      f = File.expand_path(File.join(File.dirname(__FILE__), 'views/tile.html.haml'))
       File.read(f)
     end
 end
