@@ -11,6 +11,7 @@ task :examples do
   
   $LOAD_PATH.push('lib')
   require 'tile_renderer'
+  Dir.glob('./spec/fixtures/models/*.rb').each { |f| require f }
   
   puts "---- Video with preview image"
   video = Video.new(preview: 'video.mpg')

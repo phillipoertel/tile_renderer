@@ -7,3 +7,4 @@ RSpec.configure do |config|
 end
 
 require 'rspec/given'
+Dir.glob('spec/fixtures/models/*.rb').each { |f| require f }
