@@ -12,9 +12,14 @@ class TileRenderer
   end
   
   def render
-    template = File.read('lib/rendering/tile.html.haml')
     template_data = TemplateData.for(@content)
     Haml::Engine.new(template).render(template_data)
   end
 
+  private
+  
+    def template
+      f = File.expand_path(File.join(File.dirname(__FILE__), 'tile.html.haml'))
+      File.read(f)
+    end
 end

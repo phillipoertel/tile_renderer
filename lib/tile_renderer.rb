@@ -1,6 +1,2 @@
-$LOAD_PATH.unshift("lib")
-
-# gems
 require 'haml'
-
-Dir.glob('lib/**/*.rb') { |file| require file }
+Dir.glob('lib/tile_renderer/**/*.rb').each { |f| require f.gsub('lib/', '') }
