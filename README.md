@@ -1,3 +1,5 @@
+[![Build Status](https://api.travis-ci.org/phillipoertel/taxomatic.png?branch=master)](https://travis-ci.org/phillipoertel/taxomatic)
+
 Prototype: 
 
 Render a variety of domain models into a common HTML template (i.e. a partial), although each domain model has different properties.
